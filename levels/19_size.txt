@@ -1,0 +1,26 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+
+-- 10 / 10 --
+
+start:
+    INBOX
+
+then:
+    COPYTO   0
+    OUTBOX  
+    COPYFROM 0
+    
+    JUMPZ start
+    JUMPN neg
+    -- JUMP pos
+
+-- bump down if positive --
+pos:
+    BUMPDN   0
+    JUMP then
+
+-- bump up if negative --
+neg:
+    BUMPUP  0
+    JUMP then
+    

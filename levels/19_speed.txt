@@ -1,0 +1,24 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+
+-- 78 / 82 --
+
+start:
+    INBOX
+    COPYTO   0
+    JUMPN neg
+    -- JUMP pos
+
+-- positive --
+pos:
+    OUTBOX  
+    BUMPDN   0
+    JUMPN start
+    JUMP pos
+
+-- negative --
+neg:
+    OUTBOX  
+    BUMPUP   0
+    JUMPN neg
+    OUTBOX
+    JUMP start
