@@ -1,0 +1,20 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+
+    JUMP     b
+
+-- if equal --
+a:
+    COPYFROM 0
+    OUTBOX  
+    
+-- comparison code --
+b:
+c:
+    INBOX   
+    COPYTO   0
+    INBOX   
+    SUB      0
+    JUMPZ    a
+    JUMP     c
+
+

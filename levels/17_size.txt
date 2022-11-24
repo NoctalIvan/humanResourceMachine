@@ -1,0 +1,40 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+
+-- start --
+start:
+
+    INBOX   
+    JUMPN nega
+    -- JUMP posa
+
+-- positive A --
+posa:
+
+    INBOX
+    JUMPN notsamesign
+    JUMP samesign
+
+-- negative A --
+nega:
+
+    INBOX
+    JUMPN samesign
+    -- JUMP notsamesign
+
+-- not same sign --
+notsamesign:
+
+    COPYFROM 5
+    JUMP end
+
+-- same sign --
+samesign:
+
+    COPYFROM 4
+    -- JUMP end
+
+-- end --
+end:
+
+    OUTBOX
+    JUMP start

@@ -1,0 +1,18 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+
+a:
+    INBOX
+    JUMPN   c
+
+-- output --
+b:
+    OUTBOX  
+    JUMP     a
+
+-- if negative --
+c:
+    COPYTO   0
+    SUB      0
+    SUB      0
+    JUMP     b
+
